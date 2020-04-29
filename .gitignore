@@ -27,3 +27,6 @@
 ### VS Code ###
 .vscode/
 /target/
+
+### Mac ###
+.DS_Store
