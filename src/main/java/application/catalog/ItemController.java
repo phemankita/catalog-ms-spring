@@ -14,9 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import application.catalog.models.Item;
 import application.catalog.service.ItemService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 
 @RestController
+@Api(value="Catalog API")
 @RequestMapping(value= "/")
 public class ItemController {
 	
@@ -28,6 +31,7 @@ public class ItemController {
 	 * @param items
 	 * @return
 	 */
+	@ApiOperation(value = "Save items by passing them as list")
 	@PostMapping(value= "/saveitems")
 	public String saveItem(@RequestBody List<Item> items) {
 		iserv.saveItem(items);
@@ -38,6 +42,7 @@ public class ItemController {
 	 * Method to fetch all items from the database.
 	 * @return
 	 */
+	@ApiOperation(value = "View a list of available items")
 	@GetMapping(value= "/items")
 	@ResponseBody
 	public Iterable<Item> getAllItems() {
@@ -49,6 +54,7 @@ public class ItemController {
 	 * @param name
 	 * @return
 	 */
+	@ApiOperation(value = "View an item based on its id")
 	@GetMapping(value= "/items/{item-id}")
 	public Optional<Item> getById(@PathVariable(name= "item-id") long item_id) {
 		return iserv.findById(item_id);
