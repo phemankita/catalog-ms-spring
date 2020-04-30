@@ -1,5 +1,6 @@
 package application.catalog;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,8 +46,13 @@ public class ItemController {
 	@ApiOperation(value = "View a list of available items")
 	@GetMapping(value= "/items")
 	@ResponseBody
-	public Iterable<Item> getAllItems() {
-		return iserv.findAllItems();
+	public List<Item> getAllItems() {
+		Iterable<Item> items = iserv.findAllItems();
+		List<Item> items_list = new ArrayList<>();
+		for(Item t: items) {
+			items_list.add(t);
+		}
+		return items_list;	
 	}
 	
 	/**
