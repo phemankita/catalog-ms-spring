@@ -67,19 +67,19 @@ spec:
   livenessProbe:
     failureThreshold: 12
     httpGet:
-      path: /actuator/liveness
+      path: /micro/actuator/liveness
       port: 8080
     initialDelaySeconds: 5
     periodSeconds: 2
   monitoring:
     endpoints:
-    - path: /actuator/prometheus
+    - path: /micro/actuator/prometheus
     labels:
       k8s-app: catalog-ms-spring
   readinessProbe:
     failureThreshold: 12
     httpGet:
-      path: /actuator/health
+      path: /micro/actuator/health
       port: 8080
     initialDelaySeconds: 5
     periodSeconds: 2
@@ -93,7 +93,7 @@ spec:
     value: "inventory-ms-spring"
   service:
     annotations:
-      prometheus.io/path: /actuator/prometheus
+      prometheus.io/path: /micro/actuator/prometheus
       prometheus.io/scrape: "true"
     port: 8080
     type: NodePort
