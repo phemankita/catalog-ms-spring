@@ -59,8 +59,9 @@ metadata:
     stack.appsody.dev/id: java-spring-boot2
     stack.appsody.dev/version: 0.3.28
   name: catalog-ms-spring
+  namespace: storefront
 spec:
-  applicationImage: dev.local/catalog-ms-spring
+  applicationImage: docker.io/ibmcase/catalog-ms-spring
   createKnativeService: false
   expose: true
   livenessProbe:
