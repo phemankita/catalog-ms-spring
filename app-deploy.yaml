@@ -86,7 +86,7 @@ spec:
     timeoutSeconds: 20
   env:
   - name: ELASTIC_CLUSTER_NAME
-    value: "inventory-mysql"
+    value: "elasticsearch"
   - name: ELASTIC_NODE_URL
     value: "catalog-elasticsearch-client:9200"
   - name: INVENTORY_URL
