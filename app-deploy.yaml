@@ -69,8 +69,8 @@ spec:
     httpGet:
       path: /micro/actuator/liveness
       port: 8080
-    initialDelaySeconds: 5
-    periodSeconds: 2
+    initialDelaySeconds: 20
+    periodSeconds: 15
   monitoring:
     endpoints:
     - path: /micro/actuator/prometheus
@@ -81,9 +81,9 @@ spec:
     httpGet:
       path: /micro/actuator/health
       port: 8080
-    initialDelaySeconds: 5
-    periodSeconds: 2
-    timeoutSeconds: 1
+    initialDelaySeconds: 20
+    periodSeconds: 15
+    timeoutSeconds: 20
   env:
   - name: ELASTIC_CLUSTER_NAME
     value: "inventory-mysql"
