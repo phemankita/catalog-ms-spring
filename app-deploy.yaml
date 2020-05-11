@@ -88,7 +88,7 @@ spec:
   - name: ELASTIC_CLUSTER_NAME
     value: "elasticsearch"
   - name: ELASTIC_NODE_URL
-    value: "catalog-elasticsearch-client:9200"
+    value: "catalog-elasticsearch-discovery:9300"
   - name: INVENTORY_URL
     value: "http://inventory-ms-spring:8080/micro/inventory"
   service:
