@@ -90,7 +90,7 @@ spec:
   - name: ELASTIC_NODE_URL
     value: "catalog-elasticsearch-client:9200"
   - name: INVENTORY_URL
-    value: "inventory-ms-spring"
+    value: "http://inventory-ms-spring:8080/micro/inventory"
   service:
     annotations:
       prometheus.io/path: /micro/actuator/prometheus
