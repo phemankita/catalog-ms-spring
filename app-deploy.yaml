@@ -86,9 +86,9 @@ spec:
     timeoutSeconds: 20
   env:
   - name: ELASTIC_CLUSTER_NAME
-    value: "elasticsearch"
+    value: "elasticsearch-cluster"
   - name: ELASTIC_NODE_URL
-    value: "catalog-elasticsearch-discovery:9300"
+    value: "elasticsearch-cluster:9300"
   - name: INVENTORY_URL
     value: "http://inventory-ms-spring:8080/micro/inventory"
   service:
