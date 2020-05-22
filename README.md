@@ -21,7 +21,7 @@ https://github.com/ibm-garage-ref-storefront/refarch-cloudnative-storefront*
 
 ## Introduction
 
-This project will demonstrate how to deploy a Spring Boot Application with an Elasticsearch database onto a Kubernetes Cluster. At the same time, it will also demonstrate how to deploy a dependency Microservice (Inventory) and its MySQL datastore. To know more about Inventory microservices, check [this](https://github.com/ibm-garage-ref-storefront/inventory-ms-spring) out.
+This project will demonstrate how to deploy a Spring Boot Application with an Elasticsearch database onto a Kubernetes Cluster. At the same time, it will also demonstrate how to deploy a dependency Microservice like Inventory and its MySQL datastore. To know more about Inventory microservices, check [this](https://github.com/ibm-garage-ref-storefront/inventory-ms-spring) out.
 
 ![Application Architecture](static/catalog.png?raw=true)
 
